@@ -10,9 +10,10 @@ export async function secureGet(key: string): Promise<string | null> {
   }
 }
 
-export async function secureSet(key: string, value: string | null | undefined): Promise<void> {
+export async function secureSet(key: string, value: unknown): Promise<void> {
   if (value == null) return;
-  await SecureStore.setItemAsync(PREFIX + key, value);
+  const str = typeof value === 'string' ? value : JSON.stringify(value);
+  await SecureStore.setItemAsync(PREFIX + key, str);
 }
 
 export async function secureDelete(key: string): Promise<void> {
