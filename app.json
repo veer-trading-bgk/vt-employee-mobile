@@ -12,8 +12,12 @@
       "resizeMode": "contain",
       "backgroundColor": "#1e1b4b"
     },
-    "updates": { "fallbackToCacheTimeout": 0 },
-    "assetBundlePatterns": ["**/*"],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTabletMode": true,
       "bundleIdentifier": "com.viirtrading.employee"
@@ -23,9 +27,15 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#1e1b4b"
       },
-      "package": "com.viirtrading.employee"
+      "package": "com.viirtrading.employee",
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
     },
-    "web": { "bundler": "metro" },
+    "web": {
+      "bundler": "metro"
+    },
     "plugins": [
       "expo-router",
       [
@@ -37,6 +47,16 @@
       "expo-secure-store",
       "expo-local-authentication"
     ],
-    "experiments": { "typedRoutes": true }
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f8c73f14-a31b-4f9e-88d6-76002b012c33"
+      }
+    }
   }
 }
