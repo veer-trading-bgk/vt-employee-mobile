@@ -10,7 +10,8 @@ export async function secureGet(key: string): Promise<string | null> {
   }
 }
 
-export async function secureSet(key: string, value: string): Promise<void> {
+export async function secureSet(key: string, value: string | null | undefined): Promise<void> {
+  if (value == null) return;
   await SecureStore.setItemAsync(PREFIX + key, value);
 }
 
