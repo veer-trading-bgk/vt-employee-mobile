@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "VT Trading Employee Hub",
+    "slug": "vt-employee-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "scheme": "vt-employee",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1e1b4b"
+    },
+    "updates": { "fallbackToCacheTimeout": 0 },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTabletMode": true,
+      "bundleIdentifier": "com.viirtrading.employee"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1e1b4b"
+      },
+      "package": "com.viirtrading.employee"
+    },
+    "web": { "bundler": "metro" },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "color": "#6366f1"
+        }
+      ],
+      "expo-secure-store",
+      "expo-local-authentication"
+    ],
+    "experiments": { "typedRoutes": true }
+  }
+}
