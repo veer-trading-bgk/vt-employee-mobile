@@ -19,7 +19,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTabletMode": true,
+      "supportsTablet": true,
       "bundleIdentifier": "com.viirtrading.employee"
     },
     "android": {
