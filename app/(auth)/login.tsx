@@ -38,7 +38,7 @@ export default function LoginScreen() {
     try {
       const result = await login(email.trim().toLowerCase(), password);
       await secureSet('email', email.trim().toLowerCase());
-      router.replace('/(dashboard)');
+      router.replace('/(dashboard)/admin');
     } catch (err: unknown) {
       Alert.alert('Login Failed', err instanceof Error ? err.message : 'Unknown error');
     } finally {
@@ -55,7 +55,7 @@ export default function LoginScreen() {
       Alert.alert('Not set up', 'Please log in with email first');
       return;
     }
-    router.replace('/(dashboard)');
+   router.replace('/(dashboard)/admin');
   };
 
   return (
