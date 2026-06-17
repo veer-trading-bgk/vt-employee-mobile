@@ -41,7 +41,7 @@ export const useAuthStore = create<AuthStore>((set) => ({
       throw new Error(err.message ?? 'Login failed');
     }
     const data = (await res.json()) as { user: User; token: string };
-    await secureSet('token', data.token);
+    await secureSet('token', JSON.stringify(data.token));
     await secureSet('user', JSON.stringify(data.user));
     set({ user: data.user, token: data.token });
     return { success: true, token: data.token, user: data.user };
